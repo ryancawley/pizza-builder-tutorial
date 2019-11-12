@@ -4,6 +4,14 @@ function ButtonGroup(props) {
   const buttonWidth = {
     width: "600px"
   };
+  
+  var customPizza = [];
+
+  function addIngredient(ing) {
+      customPizza.push(ing);
+      console.log(customPizza);
+  };
+
   return (
    /* <div>
       <div className="vegetables">
@@ -13,8 +21,8 @@ function ButtonGroup(props) {
       <div className="Meats">
 
       </div>
-    </div>*/
-    
+    </div>
+    */
     <div>
       <div className="d-flex justify-content-center mt-3 mb-3">
         <button
@@ -22,6 +30,7 @@ function ButtonGroup(props) {
           style={buttonWidth}
           onClick={() => {
             props.eventHandler("corn");
+            addIngredient("Tomato");
           }}
         >
           Add/Remove Tomato
@@ -34,6 +43,7 @@ function ButtonGroup(props) {
           style={buttonWidth}
           onClick={() => {
             props.eventHandler("mushroom");
+            addIngredient("Mushroom");
           }}
         >
           Add/Remove Mushroom
@@ -46,6 +56,7 @@ function ButtonGroup(props) {
           style={buttonWidth}
           onClick={() => {
             props.eventHandler("tomato");
+            addIngredient("Pepperoni");
           }}
         >
           Add/Remove Pepperoni
@@ -58,6 +69,7 @@ function ButtonGroup(props) {
           style={buttonWidth}
           onClick={() => {
             props.eventHandler("veggie");
+            addIngredient("Bell Peppers");
           }}
         >
           Add/Remove Bell Peppers
@@ -70,6 +82,7 @@ function ButtonGroup(props) {
           style={buttonWidth}
           onClick={() => {
             props.eventHandler("sausage");
+            addIngredient("Sausage");
           }}
         >
           Add/Remove Sausage
@@ -82,6 +95,7 @@ function ButtonGroup(props) {
           style={buttonWidth}
           onClick={() => {
             props.eventHandler("groundBeef");
+            addIngredient("Ground Beef");
           }}
         >
           Add/Remove Ground Beef
@@ -94,6 +108,7 @@ function ButtonGroup(props) {
           style={buttonWidth}
           onClick={() => {
             props.eventHandler("chicken");
+            addIngredient("Chicken");
           }}
         >
           Add/Remove Chicken
@@ -106,6 +121,7 @@ function ButtonGroup(props) {
           style={buttonWidth}
           onClick={() => {
             props.eventHandler("bacon");
+            addIngredient("Bacon");
           }}
         >
           Add/Remove Bacon
@@ -118,6 +134,7 @@ function ButtonGroup(props) {
           style={buttonWidth}
           onClick={() => {
             props.eventHandler("pineapple");
+            addIngredient("Pineapple");
           }}
         >
           Add/Remove Pineapple
@@ -130,6 +147,7 @@ function ButtonGroup(props) {
           style={buttonWidth}
           onClick={() => {
             props.eventHandler("spinach");
+            addIngredient("Spinach");
           }}
         >
           Add/Remove Spinach
@@ -142,6 +160,7 @@ function ButtonGroup(props) {
           style={buttonWidth}
           onClick={() => {
             props.eventHandler("bananaPeppers");
+            addIngredient("Banana Peppers");
           }}
         >
           Add/Remove Banana Peppers
@@ -154,6 +173,7 @@ function ButtonGroup(props) {
           style={buttonWidth}
           onClick={() => {
             props.eventHandler("onion");
+            addIngredient("Onion");
           }}
         >
           Add/Remove Onion
@@ -166,6 +186,7 @@ function ButtonGroup(props) {
           style={buttonWidth}
           onClick={() => {
             props.eventHandler("sardine");
+            addIngredient("Sardine");
           }}
         >
           Add/Remove Sardine
@@ -178,6 +199,7 @@ function ButtonGroup(props) {
           style={buttonWidth}
           onClick={() => {
             props.eventHandler("ham");
+            addIngredient("Ham");
           }}
         >
           Add/Remove Ham
@@ -190,6 +212,7 @@ function ButtonGroup(props) {
           style={buttonWidth}
           onClick={() => {
             props.eventHandler("cheese");
+            addIngredient("Cheese");
           }}
         >
           Add/Remove Cheese

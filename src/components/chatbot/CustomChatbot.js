@@ -8,12 +8,20 @@ function CustomChatbot (props) {
         height: "500px",
         floating: true
     };
-// Display message with all options selected as final order, 
+
+    var customPizza = [];
+
+    function addIngredient(ing) {
+        customPizza.push(ing);
+        console.log(customPizza);
+    };
+
+// Display message with all options selected as final order,
 // certain builds will trigger pre-named pizzas (meat lovers, veggie lovers, etc) even if custom built. 
     const steps = [
         {
             id: "Greet",
-            message: "Hello! Welcome to our shop",
+            message: "Hello! Welcome to our pizza shop.",
             trigger: "Ask Name"       
         },
         {
@@ -33,7 +41,7 @@ function CustomChatbot (props) {
         },
         {
             id: "What do you need",
-            message: "What can I help you with today?",
+            message: "To get started, simply type in 'pizza' below",
             trigger: "Waiting again"
         },
         {
@@ -162,22 +170,35 @@ function CustomChatbot (props) {
                 {
                     value: "Regular Cheese",
                     label: "Regular Cheese",
-                    trigger: "Topping Question"
+                    trigger: () => {
+                        props.eventHandler("cheese");
+                        addIngredient("Cheese");
+                        return "Topping Question"
+                    }
                 },
                 {
                     value: "Light Cheese",
                     label: "Light Cheese",
-                    trigger: "Topping Question"
+                    trigger: /*() => {
+                        addIngredient("Light Cheese");
+                        return*/ "Topping Question"
+                    //}
                 },
                 {
                     value: "Extra Cheese",
                     label: "Extra Cheese",
-                    trigger: "Topping Question"
+                    trigger: /*() => {
+                        addIngredient("Extra Cheese");
+                        return*/ "Topping Question"
+                    //}
                 },
                 {
                     value: "No Cheese",
                     label: "No Cheese",
-                    trigger: "Topping Question"
+                    trigger: /*() => {
+                        addIngredient("No Cheese");
+                        return*/ "Topping Question"
+                    //}
                 }
             ]
         },
@@ -189,23 +210,36 @@ function CustomChatbot (props) {
                     label: "Pepperoni",
                     trigger: () => {
                         props.eventHandler("tomato");
+                        addIngredient("Pepperoni");
                         return "Additional Topping Question"
                     }
                 },
                 {
                     value: "Ham",
                     label: "Ham",
-                    trigger: "Additional Topping Question"
+                    trigger: () => {
+                        props.eventHandler("ham");
+                        addIngredient("Ham");
+                        return "Additional Topping Question"
+                    }
                 },
                 {
                     value: "Pineapple",
                     label: "Pineapple",
-                    trigger: "Additional Topping Question"
+                    trigger: () => {
+                        props.eventHandler("pineapple");
+                        addIngredient("Pineapple");
+                        return "Additional Topping Question"
+                    }
                 },
                 {
                     value: "Bacon",
                     label: "Bacon",
-                    trigger: "Additional Topping Question"
+                    trigger: () => {
+                        props.eventHandler("bacon");
+                        addIngredient("Bacon");
+                        return "Additional Topping Question"
+                    }
                 },
                 {
                     value: "Other",
@@ -220,22 +254,38 @@ function CustomChatbot (props) {
                 {
                     value: "Tomato",
                     label: "Tomato",
-                    trigger: "Additional Topping Question"
+                    trigger: () => {
+                        props.eventHandler("corn");
+                        addIngredient("Tomato");
+                        return "Additional Topping Question"
+                    }
                 },
                 {
                     value: "Mushroom",
                     label: "Mushroom",
-                    trigger: "Additional Topping Question"
+                    trigger: () => {
+                        props.eventHandler("mushroom");
+                        addIngredient("Mushroom");
+                        return "Additional Topping Question"
+                    }
                 },
                 {
                     value: "Bell Peppers",
                     label: "Bell Peppers",
-                    trigger: "Additional Topping Question"
+                    trigger: () => {
+                        props.eventHandler("bellPeppers");
+                        addIngredient("Bell Peppers");
+                        return "Additional Topping Question"
+                    }
                 },
                 {
                     value: "Sausage",
                     label: "Sausage",
-                    trigger: "Additional Topping Question"
+                    trigger: () => {
+                        props.eventHandler("sausage");
+                        addIngredient("Sausage");
+                        return "Additional Topping Question"
+                    }
                 },
                 {
                     value: "Other",
@@ -250,22 +300,38 @@ function CustomChatbot (props) {
                 {
                     value: "Ground Beef",
                     label: "Ground Beef",
-                    trigger: "Additional Topping Question"
+                    trigger: () => {
+                        props.eventHandler("groundBeef");
+                        addIngredient("Ground Beef");
+                        return "Additional Topping Question"
+                    }
                 },
                 {
                     value: "Chicken",
                     label: "Chicken",
-                    trigger: "Additional Topping Question"
+                    trigger: () => {
+                        props.eventHandler("chicken");
+                        addIngredient("Chicken");
+                        return "Additional Topping Question"
+                    }
                 },
                 {
                     value: "Spinach",
                     label: "Spinach",
-                    trigger: "Additional Topping Question"
+                    trigger: () => {
+                        props.eventHandler("spinach");
+                        addIngredient("Spinach");
+                        return "Additional Topping Question"
+                    }
                 },
                 {
                     value: "Banana Peppers",
                     label: "Banana Peppers",
-                    trigger: "Additional Topping Question"
+                    trigger: () => {
+                        props.eventHandler("bananaPeppers");
+                        addIngredient("Banana Peppers");
+                        return "Additional Topping Question"
+                    }
                 },
                 {
                     value: "Other",
@@ -280,17 +346,25 @@ function CustomChatbot (props) {
                 {
                     value: "Onion",
                     label: "Onion",
-                    trigger: "Additional Topping Question"
+                    trigger: () => {
+                        props.eventHandler("onion");
+                        addIngredient("Onion");
+                        return "Additional Topping Question"
+                    }
                 },
                 {
                     value: "Sardine",
                     label: "Sardine",
-                    trigger: "Additional Topping Question"
+                    trigger: () => {
+                        props.eventHandler("sardine");
+                        addIngredient("Sardine");
+                        return "Additional Topping Question"
+                    }
                 },
                 {
                     value: "Done",
                     label: "Done",
-                    trigger: "Done"
+                    trigger: "Complete Custom"
                 }
             ]
         },
@@ -310,7 +384,7 @@ function CustomChatbot (props) {
                 {
                     value: "false",
                     label: "No, thanks.",
-                    trigger: "Done"
+                    trigger: "Complete Custom"
                 }
             ]
         },
@@ -333,6 +407,11 @@ function CustomChatbot (props) {
                     trigger: "Done"
                 }
             ]
+        },
+        {
+            id: "Complete Custom",
+            message: "So that's a custom pizza with {customPizza}, right?",
+            trigger: "Done"
         },
         {
             id: "Done",
