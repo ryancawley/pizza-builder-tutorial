@@ -8,7 +8,7 @@ In the project directory, run:
 
 Application will open on http://localhost:3000
 
-This application is based on a tutorial found on Github.
+This application is based on a tutorial by Himanshu Jaiswal found on Github.
 More functions will be added to the tutorial over time. 
 
 The page will reload if you make edits.<br>
