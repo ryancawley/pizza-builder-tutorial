@@ -120,22 +120,34 @@ function CustomChatbot (props) {
                 {
                     value: "Regular Crust",
                     label: "Regular Crust",
-                    trigger: "Sauce Option"
+                    trigger: () => {
+                        addIngredient("Regular Crust");
+                        return "Sauce Option"
+                    }
                 },
                 {
                     value: "Deep Dish Crust",
                     label: "Deep Dish Crust",
-                    trigger: "Sauce Option"
+                    trigger: () => {
+                        addIngredient("Deep Dish Crust");
+                        return "Sauce Option"
+                    }
                 },
                 {
                     value: "Thin Crust",
                     label: "Thin Crust",
-                    trigger: "Sauce Option"
+                    trigger: () => {
+                        addIngredient("Thin Crust");
+                        return "Sauce Option"
+                    }
                 },
                 {
                     value: "Garlic-Butter Crust",
                     label: "Garlic-Butter Crust",
-                    trigger: "Sauce Option"
+                    trigger: () => {
+                        addIngredient("Garlic-Butter Crust");
+                        return "Sauce Option"
+                    }
                 }
             ]
         },
@@ -145,22 +157,34 @@ function CustomChatbot (props) {
                 {
                     value: "Regular Sauce",
                     label: "Regular Sauce",
-                    trigger: "Cheese Option"
+                    trigger: () => {
+                        addIngredient("Regular Sauce");
+                        return "Cheese Option"
+                    }
                 },
                 {
                     value: "Light Sauce",
                     label: "Light Sauce",
-                    trigger: "Cheese Option"
+                    trigger: () => {
+                        addIngredient("Light Sauce");
+                        return "Cheese Option"
+                    }
                 },
                 {
                     value: "Extra Sauce",
                     label: "Extra Sauce",
-                    trigger: "Cheese Option"
+                    trigger: () => {
+                        addIngredient("Extra Sauce");
+                        return "Cheese Option"
+                    }
                 },
                 {
                     value: "BBQ Sauce",
                     label: "BBQ Sauce",
-                    trigger: "Cheese Option"
+                    trigger: () => {
+                        addIngredient("BBQ Sauce");
+                        return "Cheese Option"
+                    }
                 }
             ]
         },
@@ -179,26 +203,26 @@ function CustomChatbot (props) {
                 {
                     value: "Light Cheese",
                     label: "Light Cheese",
-                    trigger: /*() => {
+                    trigger: () => {
                         addIngredient("Light Cheese");
-                        return*/ "Topping Question"
-                    //}
+                        return "Topping Question"
+                    }
                 },
                 {
                     value: "Extra Cheese",
                     label: "Extra Cheese",
-                    trigger: /*() => {
+                    trigger: () => {
                         addIngredient("Extra Cheese");
-                        return*/ "Topping Question"
-                    //}
+                        return "Topping Question"
+                    }
                 },
                 {
                     value: "No Cheese",
                     label: "No Cheese",
-                    trigger: /*() => {
+                    trigger: () => {
                         addIngredient("No Cheese");
-                        return*/ "Topping Question"
-                    //}
+                        return "Topping Question"
+                    }
                 }
             ]
         },
