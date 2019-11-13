@@ -17,7 +17,6 @@ function CustomChatbot (props) {
     };
 
 // Display message with all options selected as final order,
-// certain builds will trigger pre-named pizzas (meat lovers, veggie lovers, etc) even if custom built. 
     const steps = [
         {
             id: "Greet",

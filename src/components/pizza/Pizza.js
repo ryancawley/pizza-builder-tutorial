@@ -16,7 +16,8 @@ class Pizza extends Component {
       tomato: false,
       mushroom: false,
       veggie: false,
-      corn: false
+      corn: false,
+      customPizza: false
     };
   }
 
