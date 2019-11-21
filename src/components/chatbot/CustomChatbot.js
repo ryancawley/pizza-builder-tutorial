@@ -1,19 +1,19 @@
 import React from 'react';
 import ChatBot from 'react-simple-chatbot';
+import { tsConstructorType } from '@babel/types';
 
 function CustomChatbot (props) {
-
     const config = {
         width: "300px",
         height: "500px",
         floating: true
     };
 
-    var customPizza = [];
+    var customChatPizza = ["crust"];
 
     function addIngredient(ing) {
-        customPizza.push(ing);
-        console.log(customPizza);
+        customChatPizza.push(ing);
+        console.log(customChatPizza);
     };
 
 // Display message with all options selected as final order,
@@ -447,3 +447,4 @@ function CustomChatbot (props) {
 };
 
 export default CustomChatbot;
+export var customChatPizza;

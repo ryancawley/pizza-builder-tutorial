@@ -7,7 +7,8 @@ import Mushroom from "../mushroom/Mushroom";
 import Corn from "../corn/Corn";
 import Veggie from "../veggie/Veggie";
 import ButtonGroup from "../buttonGroup/ButtonGroup";
-import CustomChatbot from "../chatbot/CustomChatbot";
+import CustomChatbot, {customChatPizza} from "../chatbot/CustomChatbot";
+
 
 class Pizza extends Component {
   constructor(props) {
@@ -17,7 +18,7 @@ class Pizza extends Component {
       mushroom: false,
       veggie: false,
       corn: false,
-      customPizza: false
+      customPizza: true
     };
   }
 
@@ -59,7 +60,7 @@ class Pizza extends Component {
               {veggie}
             </div>
           </div>
-          <ButtonGroup eventHandler={this.clickEventHandler} />
+          <ButtonGroup { ...customChatPizza } eventHandler={this.clickEventHandler} />
           <CustomChatbot eventHandler={this.clickEventHandler} />
         </div>
       </div>

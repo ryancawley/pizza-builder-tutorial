@@ -1,4 +1,5 @@
 import React from "react";
+import customChatPizza from '../chatbot/CustomChatbot';
 
 function ButtonGroup(props) {
   const buttonWidth = {
@@ -13,18 +14,13 @@ function ButtonGroup(props) {
   };
 
   return (
-   /* <div>
-      <div className="vegetables">
-
-      </div>
-
-      <div className="Meats">
-
-      </div>
-    </div>
-    */
     <div>
-      <div className="d-flex justify-content-center mt-3 mb-3">
+      <div  className="d-flex justify-content-center mt-3 mb-3">
+        <h2>Custom pizza goes here.{ customChatPizza }</h2>
+      </div>
+    <div>
+      <div className="vegetables">
+        <div className="d-flex justify-content-center mt-3 mb-3">
         <button
           className="btn btn-success btn-block"
           style={buttonWidth}
@@ -52,19 +48,6 @@ function ButtonGroup(props) {
 
       <div className="d-flex justify-content-center mt-3 mb-3">
         <button
-          className="btn btn-danger btn-block"
-          style={buttonWidth}
-          onClick={() => {
-            props.eventHandler("tomato");
-            addIngredient("Pepperoni");
-          }}
-        >
-          Add/Remove Pepperoni
-        </button>
-      </div>
-
-      <div className="d-flex justify-content-center mt-3 mb-3">
-        <button
           className="btn btn-success 1-block"
           style={buttonWidth}
           onClick={() => {
@@ -73,6 +56,88 @@ function ButtonGroup(props) {
           }}
         >
           Add/Remove Bell Peppers
+        </button>
+      </div>
+
+      <div className="d-flex justify-content-center mt-3 mb-3">
+        <button
+          className="btn btn-success 1-block"
+          style={buttonWidth}
+          onClick={() => {
+            props.eventHandler("pineapple");
+            addIngredient("Pineapple");
+          }}
+        >
+          Add/Remove Pineapple
+        </button>
+      </div>
+
+      <div className="d-flex justify-content-center mt-3 mb-3">
+        <button
+          className="btn btn-success 1-block"
+          style={buttonWidth}
+          onClick={() => {
+            props.eventHandler("spinach");
+            addIngredient("Spinach");
+          }}
+        >
+          Add/Remove Spinach
+        </button>
+      </div>
+
+      <div className="d-flex justify-content-center mt-3 mb-3">
+        <button
+          className="btn btn-success 1-block"
+          style={buttonWidth}
+          onClick={() => {
+            props.eventHandler("bananaPeppers");
+            addIngredient("Banana Peppers");
+          }}
+        >
+          Add/Remove Banana Peppers
+        </button>
+      </div>
+
+      <div className="d-flex justify-content-center mt-3 mb-3">
+        <button
+          className="btn btn-success 1-block"
+          style={buttonWidth}
+          onClick={() => {
+            props.eventHandler("onion");
+            addIngredient("Onion");
+          }}
+        >
+          Add/Remove Onion
+        </button>
+      </div>
+
+      </div>
+
+      <div className="Meats">
+        <div className="d-flex justify-content-center mt-3 mb-3">
+          <button
+            className="btn btn-danger 1-block"
+            style={buttonWidth}
+            onClick={() => {
+              props.eventHandler("ham");
+              addIngredient("Ham");
+            }}
+          >
+            Add/Remove Ham
+          </button>
+        </div>
+      </div>
+
+      <div className="d-flex justify-content-center mt-3 mb-3">
+        <button
+          className="btn btn-danger btn-block"
+          style={buttonWidth}
+          onClick={() => {
+            props.eventHandler("tomato");
+            addIngredient("Pepperoni");
+          }}
+        >
+          Add/Remove Pepperoni
         </button>
       </div>
 
@@ -130,58 +195,6 @@ function ButtonGroup(props) {
 
       <div className="d-flex justify-content-center mt-3 mb-3">
         <button
-          className="btn btn-success 1-block"
-          style={buttonWidth}
-          onClick={() => {
-            props.eventHandler("pineapple");
-            addIngredient("Pineapple");
-          }}
-        >
-          Add/Remove Pineapple
-        </button>
-      </div>
-
-      <div className="d-flex justify-content-center mt-3 mb-3">
-        <button
-          className="btn btn-success 1-block"
-          style={buttonWidth}
-          onClick={() => {
-            props.eventHandler("spinach");
-            addIngredient("Spinach");
-          }}
-        >
-          Add/Remove Spinach
-        </button>
-      </div>
-
-      <div className="d-flex justify-content-center mt-3 mb-3">
-        <button
-          className="btn btn-success 1-block"
-          style={buttonWidth}
-          onClick={() => {
-            props.eventHandler("bananaPeppers");
-            addIngredient("Banana Peppers");
-          }}
-        >
-          Add/Remove Banana Peppers
-        </button>
-      </div>
-
-      <div className="d-flex justify-content-center mt-3 mb-3">
-        <button
-          className="btn btn-success 1-block"
-          style={buttonWidth}
-          onClick={() => {
-            props.eventHandler("onion");
-            addIngredient("Onion");
-          }}
-        >
-          Add/Remove Onion
-        </button>
-      </div>
-
-      <div className="d-flex justify-content-center mt-3 mb-3">
-        <button
           className="btn btn-danger 1-block"
           style={buttonWidth}
           onClick={() => {
@@ -192,31 +205,6 @@ function ButtonGroup(props) {
           Add/Remove Sardine
         </button>
       </div>
-
-      <div className="d-flex justify-content-center mt-3 mb-3">
-        <button
-          className="btn btn-danger 1-block"
-          style={buttonWidth}
-          onClick={() => {
-            props.eventHandler("ham");
-            addIngredient("Ham");
-          }}
-        >
-          Add/Remove Ham
-        </button>
-      </div>
-
-      <div className="d-flex justify-content-center mt-3 mb-3">
-        <button
-          className="btn btn-warning 1-block"
-          style={buttonWidth}
-          onClick={() => {
-            props.eventHandler("cheese");
-            addIngredient("Cheese");
-          }}
-        >
-          Add/Remove Cheese
-        </button>
       </div>
     </div>
   );
